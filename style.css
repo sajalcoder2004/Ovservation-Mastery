@@ -1,0 +1,797 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* ======= General Styles ======= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
+    /* Light Grey Background */
+    margin: 0;
+    padding: 0;
+}
+
+/* ======= Navbar Styles ======= */
+.navbar {
+    background: rgba(0, 123, 255, 0.9);
+    /* Midnight Blue with Transparency */
+    backdrop-filter: blur(10px);
+    /* Frosted Glass Effect */
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #E0E0E0;
+    /* Light Grey */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand img.logo {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.navbar-brand:hover {
+    color: #FFD700;
+    /* Gold Effect */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #E0E0E0;
+    padding: 8px 15px;
+    transition: color 0.3s, transform 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFD700;
+    /* Gold Hover Effect */
+    transform: translateY(-2px);
+}
+
+/* ======= Start Learning Button ======= */
+.start-learning-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #228B22, #32CD32);
+    /* Warm Gradient (Orange-Red) */
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.start-learning-btn:hover {
+    background: linear-gradient(45deg, #32CD32, #006400);
+    /* Darker Gradient */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.5);
+}
+
+/* ======= Mobile Menu Styling ======= */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        background: rgba(0, 123, 255, 0.9);
+        /* Same as Navbar */
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 8px 0;
+    }
+
+    .start-learning-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* ======= Hero Section Styles ======= */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    /* Full-screen height */
+    background: url('hero-background.jpg') center center/cover no-repeat;
+    /* Add your image path here */
+    filter: blur(8px);
+    /* Blurred effect */
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Hover effect for the background */
+.hero-section:hover {
+    filter: blur(0px);
+    /* Image sharpens on hover */
+}
+
+/* Overlay for text visibility */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark transparent overlay */
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #ffffff;
+    /* White Text */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Call-to-Action Button */
+.start-observing-btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #007BFF, #32CD32);
+    /* Blue to Green Gradient */
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+    /* Pulsating effect */
+}
+
+/* Hover effect for button */
+.start-observing-btn:hover {
+    background: linear-gradient(45deg, #32CD32, #007BFF);
+    /* Reverse Gradient */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.6);
+}
+
+/* Button Pulsating Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ======= Mobile Responsiveness ======= */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .start-observing-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+
+/* ======= Key Benefits Section Styles ======= */
+.key-benefits-section {
+    background-color: #F4F4F4;
+    /* Light Grey Background */
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2F4F4F;
+    /* Dark Slate Green */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.benefit-card {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    /* Light Border */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons for each card */
+.card-icon {
+    font-size: 3rem;
+    color: #007BFF;
+    /* Ocean Blue */
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.benefit-card:hover .card-icon {
+    color: #228B22;
+    /* Forest Green */
+}
+
+/* Heading and description styles */
+.benefit-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2F4F4F;
+    /* Dark Slate Green */
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #696969;
+    /* Dim Gray */
+    margin-bottom: 20px;
+}
+
+/* Example text that appears on hover */
+.example {
+    display: none;
+    font-size: 1rem;
+    font-style: italic;
+    color: #2F4F4F;
+    /* Dark Slate Green */
+}
+
+.benefit-card:hover .example {
+    display: block;
+}
+
+/* ======= Mobile Responsiveness ======= */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .benefit-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .benefit-card h4 {
+        font-size: 1.25rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ======= Course Overview Styles ======= */
+.course-overview {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2F4F4F;
+    /* Dark Slate Green */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item .icon {
+    font-size: 2.5rem;
+    color: #007BFF;
+    /* Ocean Blue */
+    transition: color 0.3s ease-in-out;
+}
+
+.timeline-item:hover .icon {
+    color: #228B22;
+    /* Forest Green */
+}
+
+.timeline-item h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2F4F4F;
+    /* Dark Slate Green */
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #696969;
+    /* Dim Gray */
+}
+
+.learn-more-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #007BFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.learn-more-btn:hover {
+    background: #228B22;
+    /* Forest Green */
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-item .icon {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ======= Call to Action Section ======= */
+.cta-section {
+    position: relative;
+    background: #006400; /* Forest Green */
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #FFD700; /* Gold text */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Styling */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.curriculum-btn {
+    background: linear-gradient(45deg, #007BFF, #32CD32); /* Blue to Green */
+}
+
+.lessons-btn {
+    background: linear-gradient(45deg, #FF6347, #FFD700); /* Warm Gradient */
+}
+
+.start-btn {
+    background: linear-gradient(45deg, #FF4500, #FF6347); /* Red to Orange */
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ======= Background Animation for Call to Action Section ======= */
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('pattern-bg.jpg') repeat; /* Replace with a subtle pattern image */
+    animation: moveBackground 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* ======= Mobile Responsiveness ======= */
+@media (max-width: 768px) {
+    .cta-heading {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* ======= Curriculum Page Styles ======= */
+.curriculum-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2F4F4F; /* Dark Slate Green */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Accordion Styling */
+.accordion-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #007BFF; /* Ocean Blue */
+    background-color: #f8f9fa;
+    border: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #e0f7fa; /* Light Blue */
+}
+
+.accordion-body {
+    font-size: 1rem;
+    color: #696969; /* Dim Gray */
+    padding: 15px 20px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-item {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #007BFF;
+    color: white;
+}
+
+.accordion-button.collapsed {
+    color: #007BFF;
+}
+
+/* ======= Mobile Responsiveness ======= */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ======= Lessons Section Styles ======= */
+.lessons-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2F4F4F; /* Dark Slate Green */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Card Styles for Each Lesson */
+.lesson-card {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0; /* Light Border */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.lesson-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007BFF; /* Ocean Blue */
+    border-color: #007BFF;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #228B22; /* Forest Green */
+    border-color: #228B22;
+    transform: scale(1.05);
+}
+
+/* ======= Mobile Responsiveness ======= */
+@media (max-width: 768px) {
+    .lesson-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 8px 18px;
+    }
+}
+
+
+
+
+/* ======= General Styles ======= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ======= Lesson Content Styles ======= */
+.lesson-content {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.lesson-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2F4F4F; /* Dark Slate Green */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Lesson Sections */
+.lesson-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #007BFF; /* Blue Accent */
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.lesson-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007BFF; /* Ocean Blue */
+}
+
+/* Return Button */
+.return-btn {
+    background-color: #007BFF;
+    color: white;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.return-btn:hover {
+    background-color: #228B22; /* Forest Green */
+    transform: scale(1.05);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lesson-title {
+        font-size: 2rem;
+    }
+
+    .lesson-section {
+        padding: 15px;
+    }
+
+    .return-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+
+/* ======= Footer Section Styles ======= */
+.footer-section {
+    background: #2F4F4F; /* Dark Slate Gray */
+    color: #ffffff;
+    padding: 60px 0 20px;
+    font-size: 1rem;
+}
+
+.footer-section h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FFD700; /* Gold Text */
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #E0E0E0; /* Light Gray */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #FFD700; /* Gold Hover Effect */
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #E0E0E0; /* Light Gray */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Gold Hover */
+    transform: scale(1.2);
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #E0E0E0;
+}
+
+/* ======= Mobile Responsiveness ======= */
+@media (max-width: 768px) {
+    .footer-section .row {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links {
+        display: inline-block;
+    }
+}
